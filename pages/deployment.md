@@ -42,3 +42,4 @@ Trong ví dụ này
 |`.spec.strategy`|object|Chỉ định chiến lược sử dụng các POD mới để thay thế cho các POD cũ. Có 2 chiến lược: "Recreate" và "RollingUpdate" trong đó "RollingUpdate" là giá trị mặc định|
 |`.spec.template`|object|Chỉ định nên kịch bản xây dựng nên các POD|
 * Chú ý: Trong để check được status, reason được đề cập bên trên thì dùng câu lệnh `kubectl describe deploy/<deploy-name>`
+* Link tham khảo: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
