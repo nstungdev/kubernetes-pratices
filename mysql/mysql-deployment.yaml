@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pre-mysql
+spec:
+  selector:
+    matchLabels:
+      app: pre-mysql
+  replicas: 2
+
+  template:
+    metadata:
+      labels:
+        app: pre-mysql
+    spec:
+      containers:
+      - name: pre-mysql
+        image: mysql:8.0.31
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        # expose port of image
+        - containerPort: 3306
